@@ -17,7 +17,7 @@ var TODO = mongoose.model('Todo', new Schema({
 }))
 
 var COMPOSE_URI_DEFAULT = 'mongodb://localhost/graphql-todo'
-    mongoose.connect(process.env.COMPOSE_URI || COMPOSE_URI_DEFAULT, function (error) {
+    mongoose.connect(process.env.MONGODB_URI || COMPOSE_URI_DEFAULT, function (error) {
     if (error) console.error(error)
     else console.log('mongo connected')
 })
